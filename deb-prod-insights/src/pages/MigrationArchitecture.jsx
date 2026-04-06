@@ -100,7 +100,7 @@ export default function MigrationArchitecture() {
 
   return (
     <PostLayout
-      title=".NET 8 Migration Architecture"
+      title=".NET 8 + Migration Architecture"
       subtitle="From monolith to cloud-native — the engineering decisions that actually matter in production."
       accent="purple"
       tag=".NET 8 · Cloud Native"
@@ -145,7 +145,7 @@ export default function MigrationArchitecture() {
       {/* Code example */}
       <Section title="📋 Pattern in Practice" accent="green">
         <p style={{ color: colors.textMuted, fontSize: '15px', marginBottom: '20px' }}>
-          The Outbox Pattern in .NET 8 — guaranteeing no event is lost even during transient failures:
+          The Outbox Pattern in .NET 8  & above— guaranteeing no event is lost even during transient failures:
         </p>
         <CodeBlock
           code={OUTBOX_CODE}

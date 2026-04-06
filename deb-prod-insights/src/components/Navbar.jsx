@@ -85,7 +85,7 @@ export default function Navbar() {
         <div style={navLinksStyle}>
           {LINKS.map(l => <NavLink key={l.path} {...l} />)}
         </div>
-        <span style={chipStyle}>.NET 8</span>
+        <span style={chipStyle}>.NET 8 +</span>
       </div>
     </nav>
   );
