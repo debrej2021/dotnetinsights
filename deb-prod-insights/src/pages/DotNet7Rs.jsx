@@ -1,9 +1,10 @@
-import PostLayout   from '../components/PostLayout.jsx';
-import Section      from '../components/Section.jsx';
-import HighlightBox from '../components/HighlightBox.jsx';
-import Card         from '../components/Card.jsx';
-import Badge        from '../components/Badge.jsx';
-import { useToggle } from '../hooks/useToggle.js';
+import PostLayout        from '../components/PostLayout.jsx';
+import Section           from '../components/Section.jsx';
+import HighlightBox      from '../components/HighlightBox.jsx';
+import Card              from '../components/Card.jsx';
+import Badge             from '../components/Badge.jsx';
+import VideoSalesSection from '../components/VideoSalesSection.jsx';
+import { useToggle }     from '../hooks/useToggle.js';
 import { colors, transition, radius } from '../styles/theme.js';
 
 // ── Data ──────────────────────────────────────────────────────────────────────
@@ -123,6 +124,62 @@ export default function DotNet7Rs() {
         ))}
       </div>
 
+      {/* ── Video teaser CTA ───────────────────────────────────────────────── */}
+      <div
+        onClick={() =>
+          document.getElementById('video-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+        style={{
+          display:        'flex',
+          alignItems:     'center',
+          justifyContent: 'space-between',
+          gap:            '16px',
+          background:     `${colors.blue}0d`,
+          border:         `1px solid ${colors.blue}33`,
+          borderRadius:   radius.lg,
+          padding:        '14px 20px',
+          marginBottom:   '40px',
+          cursor:         'pointer',
+          transition:     transition.fast,
+          flexWrap:       'wrap',
+        }}
+        onMouseEnter={e => {
+          e.currentTarget.style.background     = `${colors.blue}18`;
+          e.currentTarget.style.borderColor    = `${colors.blue}66`;
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.background     = `${colors.blue}0d`;
+          e.currentTarget.style.borderColor    = `${colors.blue}33`;
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <span style={{ fontSize: '20px' }}>🎬</span>
+          <div>
+            <div style={{ fontSize: '14px', fontWeight: 700, color: colors.text }}>
+              Get the 3-min quick-reference video
+            </div>
+            <div style={{ fontSize: '12px', color: colors.textMuted, marginTop: '2px' }}>
+              All 7 Rs · Decision framework · 1080p HD download
+            </div>
+          </div>
+        </div>
+        <div style={{
+          display:      'inline-flex',
+          alignItems:   'center',
+          gap:          '6px',
+          background:   colors.blue,
+          color:        colors.bg,
+          fontWeight:   700,
+          fontSize:     '13px',
+          padding:      '7px 16px',
+          borderRadius: radius.md,
+          whiteSpace:   'nowrap',
+          flexShrink:   0,
+        }}>
+          $3 — See details ↓
+        </div>
+      </div>
+
       {/* Cards */}
       <Section title="🚀 The 7 Rs Explained" accent="blue">
         {RS.map(({ number, title, icon, accent, tag, body }) => (
@@ -168,6 +225,9 @@ export default function DotNet7Rs() {
           ))}
         </div>
       </Section>
+
+      {/* ── Video sales section ─────────────────────────────────────────────── */}
+      <VideoSalesSection />
 
     </PostLayout>
   );
