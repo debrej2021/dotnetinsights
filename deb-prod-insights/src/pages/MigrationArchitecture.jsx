@@ -70,16 +70,23 @@ export default function MigrationArchitecture() {
   const videoContainerStyle = {
     borderRadius: radius.lg,
     border:       `1px solid ${colors.border}`,
-    overflow:     'hidden',
+    // overflow must be 'visible' when expanded so the browser's
+    // native fullscreen API can paint the video over the whole screen.
+    // When collapsed we keep 'hidden' so the slide-down animation clips correctly.
+    overflow:     videoExpanded ? 'visible' : 'hidden',
     background:   colors.bgCode,
     boxShadow:    shadow.card,
     marginTop:    '16px',
-    transition:   transition.normal,
   };
 
   const videoStyle = {
-    width:   '100%',
-    display: 'block',
+    width:        '100%',
+    display:      'block',
+    borderRadius: radius.lg,   // rounded corners on the video itself
+    // Let the video grow to its natural height when expanded
+    maxHeight:    videoExpanded ? 'none' : '0',
+    opacity:      videoExpanded ? 1 : 0,
+    transition:   'max-height 0.5s ease, opacity 0.3s ease',
   };
 
   const expandBtnStyle = {
@@ -119,14 +126,15 @@ export default function MigrationArchitecture() {
           {videoExpanded ? '▲ Collapse video' : '▶ Play architecture walkthrough'}
         </button>
 
-        <div style={{
-          ...videoContainerStyle,
-          maxHeight: videoExpanded ? '600px' : '0',
-          opacity:   videoExpanded ? 1 : 0,
-          overflow:  'hidden',
-          transition: 'max-height 0.5s ease, opacity 0.3s ease',
-        }}>
-          <video style={videoStyle} controls autoPlay={videoExpanded} loop muted>
+        <div style={videoContainerStyle}>
+          <video
+            style={videoStyle}
+            controls
+            autoPlay={videoExpanded}
+            loop
+            muted
+            playsInline
+          >
             <source src={architectureVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -145,7 +153,7 @@ export default function MigrationArchitecture() {
       {/* Code example */}
       <Section title="📋 Pattern in Practice" accent="green">
         <p style={{ color: colors.textMuted, fontSize: '15px', marginBottom: '20px' }}>
-          The Outbox Pattern in .NET 8  & above— guaranteeing no event is lost even during transient failures:
+          The Outbox Pattern in .NET 8 — guaranteeing no event is lost even during transient failures:
         </p>
         <CodeBlock
           code={OUTBOX_CODE}
