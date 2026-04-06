@@ -98,7 +98,7 @@ export default function DotNet7Rs() {
       title=".NET Migration — The 7 Rs"
       subtitle="Are you modernizing… or just moving tech debt to the cloud? Understand which strategy fits your system before you write a single line of migration code."
       accent="blue"
-      tag=".NET 8 · Migration"
+      tag=".NET 8 & above Migration"
       readTime="6 min read"
     >
 
