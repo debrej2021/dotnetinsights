@@ -14,7 +14,7 @@ const COBOL_LABEL = '#c9842a';
 const CS_LABEL    = '#9b4dca';
 
 // ── Replace with your actual Gumroad / Stripe / Paddle links ─────────────────
-const PURCHASE_DOC_HREF    = 'https://debprod.lemonsqueezy.com/checkout/buy/19786116-1933-4439-a3ba-4daab6ab9f5c';  // $3
+//const PURCHASE_DOC_HREF    = 'https://debprod.lemonsqueezy.com/checkout/buy/19786116-1933-4439-a3ba-4daab6ab9f5c';  // $3
 const PURCHASE_BUNDLE_HREF = 'https://debprod.lemonsqueezy.com/checkout/buy/45681852-18dd-48f4-93aa-21c1272c4cf0';     // $5
 
 const PATTERNS = [
@@ -414,9 +414,9 @@ function CobolSalesSection() {
         <div style={{ fontSize: '12.5px', color: colors.textMuted, marginBottom: '16px', lineHeight: 1.5 }}>
           All 8 patterns as a formatted Word doc — code comparisons, AWS &amp; Azure tools, migration gotchas. Print it, share it, keep it offline.
         </div>
-        <a href={PURCHASE_DOC_HREF} target="_blank" rel="noopener noreferrer"
+        <a href="/downloads/cobol-to-csharp-reference.docx" target="_blank" rel="noopener noreferrer"
           style={{ display: 'inline-block', background: COBOL_LABEL, color: '#fff', fontWeight: 700, fontSize: '14px', padding: '9px 22px', borderRadius: radius.md, textDecoration: 'none' }}>
-          Get .docx — $3
+          Get .docx — Free
         </a>
       </div>
 

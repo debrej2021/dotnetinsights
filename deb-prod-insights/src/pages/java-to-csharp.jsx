@@ -13,7 +13,7 @@ const JAVA_LABEL = '#f89820';
 const CS_LABEL   = '#9b4dca';
 
 // ── Replace with your actual payment links ──────────────────────────────────
-const PURCHASE_DOC_HREF  = 'https://your-payment-link.com/java-reference'; // $3
+//const PURCHASE_DOC_HREF  = 'https://your-payment-link.com/java-reference'; // $3
 const PURCHASE_BOTH_HREF = 'https://your-payment-link.com/migration-bundle'; // $5
 
 const PATTERNS = [
@@ -469,9 +469,9 @@ function JavaSalesSection() {
         <div style={{ fontSize: '12.5px', color: colors.textMuted, marginBottom: '16px', lineHeight: 1.5 }}>
           All 8 patterns as a formatted Word doc — Java vs C# code comparisons, ecosystem table, AWS &amp; Azure tools, migration gotchas.
         </div>
-        <a href={PURCHASE_DOC_HREF} target="_blank" rel="noopener noreferrer"
+        <a href="/downloads/java-to-csharp-reference.docx" target="_blank" rel="noopener noreferrer"
           style={{ display: 'inline-block', background: JAVA_LABEL, color: '#fff', fontWeight: 700, fontSize: '14px', padding: '9px 22px', borderRadius: radius.md, textDecoration: 'none' }}>
-          Get .docx — $3
+          Get .docx — Free
         </a>
       </div>
 
