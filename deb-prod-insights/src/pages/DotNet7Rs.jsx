@@ -750,6 +750,118 @@ export default function DotNet7Rs() {
           </div>
         </Section>
 
+        {/* ── Migration Guides Hub ─────────────────────────────────────────── */}
+        <Section title="🗺️ Go Deeper — Migration Guides" accent="purple">
+          <p style={{ color: colors.textMuted, fontSize: '14px', marginBottom: '20px' }}>
+            Ready to migrate your COBOL mainframe or Java Spring Boot app to .NET 8?
+            Each guide includes 8 pattern-by-pattern code comparisons, AWS &amp; Azure tooling,
+            a downloadable Word reference, and — for COBOL — an AI-powered code analyzer.
+          </p>
+
+          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+            {/* COBOL card */}
+            {[
+              {
+                href:      '/cobol-to-csharp',
+                icon:      '🖥️',
+                lang:      'COBOL',
+                arrow:     'C#',
+                color:     '#C9842A',
+                bg:        '#C9842A',
+                tag:       'Mainframe Modernisation',
+                blurb:     '8 patterns · Data Division, PERFORM, EVALUATE, File I/O, CALL subroutines → .NET 8',
+                badge:     '+ AI Analyzer',
+                price:     '$5',
+              },
+              {
+                href:      '/java-to-csharp',
+                icon:      '☕',
+                lang:      'Java',
+                arrow:     'C#',
+                color:     '#F89820',
+                bg:        '#F89820',
+                tag:       'Spring Boot → ASP.NET Core',
+                blurb:     '8 patterns · Streams → LINQ, Optional, CompletableFuture, Spring DI, Records, JUnit',
+                badge:     '+ Ref Guide',
+                price:     '$3',
+              },
+            ].map(({ href, icon, lang, arrow, color, tag, blurb, badge, price }) => (
+              <a
+                key={lang}
+                href={href}
+                style={{
+                  flex:           '1 1 260px',
+                  display:        'block',
+                  background:     colors.bgCard,
+                  border:         `1px solid ${color}40`,
+                  borderRadius:   radius.lg,
+                  padding:        '20px',
+                  textDecoration: 'none',
+                  transition:     'border-color 0.2s, transform 0.15s',
+                  cursor:         'pointer',
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.borderColor = color;
+                  e.currentTarget.style.transform   = 'translateY(-2px)';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.borderColor = `${color}40`;
+                  e.currentTarget.style.transform   = 'none';
+                }}
+              >
+                {/* Header */}
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span style={{ fontSize: '22px' }}>{icon}</span>
+                    <span style={{ fontSize: '16px', fontWeight: 800, color }}>
+                      {lang} → {arrow}
+                    </span>
+                  </div>
+                  <span style={{
+                    background: color, color: '#fff', fontWeight: 700,
+                    fontSize: '13px', padding: '4px 12px', borderRadius: radius.md,
+                  }}>
+                    {price}
+                  </span>
+                </div>
+
+                {/* Tag + badge */}
+                <div style={{ display: 'flex', gap: '6px', marginBottom: '10px', flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: '11px', color, fontWeight: 600, background: `${color}15`, padding: '2px 8px', borderRadius: radius.sm ?? '4px' }}>
+                    {tag}
+                  </span>
+                  <span style={{ fontSize: '11px', color: colors.textMuted, background: `${colors.blue}18`, padding: '2px 8px', borderRadius: radius.sm ?? '4px' }}>
+                    {badge}
+                  </span>
+                </div>
+
+                {/* Description */}
+                <p style={{ fontSize: '12.5px', color: colors.textMuted, margin: 0, lineHeight: 1.5 }}>
+                  {blurb}
+                </p>
+
+                <div style={{ marginTop: '14px', fontSize: '13px', fontWeight: 600, color }}>
+                  View guide →
+                </div>
+              </a>
+            ))}
+          </div>
+
+          {/* Bundle note */}
+          <div style={{
+            marginTop:    '16px',
+            padding:      '12px 18px',
+            background:   `${colors.blue}0d`,
+            border:       `1px solid ${colors.blue}30`,
+            borderRadius: radius.md,
+            fontSize:     '13px',
+            color:        colors.textMuted,
+          }}>
+            💡 <strong style={{ color: colors.text }}>Bundle:</strong> Get both guides + COBOL Analyzer for{' '}
+            <strong style={{ color: colors.blue }}>$7</strong> — links on each guide page.
+          </div>
+        </Section>
+
         {/* ── Video sales section ───────────────────────────────────────────── */}
         <VideoSalesSection />
 

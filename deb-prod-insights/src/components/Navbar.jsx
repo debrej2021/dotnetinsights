@@ -6,6 +6,8 @@ const LINKS = [
   { label: 'The 7 Rs',      path: '/dotnet-7rs'            },
   { label: 'Architecture',  path: '/migration-architecture' },
   { label: 'About',         path: '/about'                  },
+  { label: 'Cobol to C#',   path: '/cobol-to-csharp'        },
+  {label: 'Java to C#  ',          path: '/java-to-csharp ' }
 
 ];
 
