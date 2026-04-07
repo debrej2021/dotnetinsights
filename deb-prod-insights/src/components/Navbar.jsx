@@ -1,9 +1,12 @@
 import { useHover } from '../hooks/useHover.js';
 import { colors, fonts, transition } from '../styles/theme.js';
+//import { Link } from 'react-router-dom';
 
 const LINKS = [
   { label: 'The 7 Rs',      path: '/dotnet-7rs'            },
   { label: 'Architecture',  path: '/migration-architecture' },
+  { label: 'About',         path: '/about'                  },
+
 ];
 
 function NavLink({ label, path }) {
@@ -81,7 +84,7 @@ export default function Navbar() {
   return (
     <nav style={barStyle}>
       <div style={innerStyle}>
-        <a href="/" style={logoStyle}>deb//insights</a>
+        <a href="/" style={logoStyle}>deb-insights</a>
         <div style={navLinksStyle}>
           {LINKS.map(l => <NavLink key={l.path} {...l} />)}
         </div>
