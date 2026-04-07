@@ -6,6 +6,7 @@ import CodeBlock    from '../components/CodeBlock.jsx';
 import { useToggle } from '../hooks/useToggle.js';
 import { colors, radius, shadow, transition } from '../styles/theme.js';
 import architectureVideo from '../assets/architecture.mp4';
+import { Helmet} from 'react-helmet';
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 const DECISIONS = [
@@ -106,6 +107,16 @@ export default function MigrationArchitecture() {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>Cloud Migration Architecture | .NET System Design Patterns</title>
+      <meta
+        name="description"
+  content="Explore cloud migration architecture patterns for .NET systems — including microservices, event-driven design, async processing, and scalable system strategies."
+
+      />
+      <link rel="canonical" href="https://insights.debprod.com/migration-architecture" />
+    </Helmet>
     <PostLayout
       title=".NET 8 + Migration Architecture"
       subtitle="From monolith to cloud-native — the engineering decisions that actually matter in production."
@@ -171,5 +182,6 @@ export default function MigrationArchitecture() {
       />
 
     </PostLayout>
+    </>
   );
 }

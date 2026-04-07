@@ -1,7 +1,17 @@
 import React from "react";
-
+import { Helmet} from 'react-helmet';
 const About = () => {
   return (
+    <>
+    <Helmet>
+      <title>Cloud Migration Architecture | .NET System Design Patterns</title>
+      <meta
+        name="description"
+  content="Explore cloud migration architecture patterns for .NET systems — including microservices, event-driven design, async processing, and scalable system strategies."
+
+      />
+      <link rel="canonical" href="https://insights.debprod.com/about" />
+    </Helmet>
     <div style={{ maxWidth: "900px", margin: "0 auto", padding: "40px 20px", color: "#cbd5f5" }}>
       
       <h1 style={{ fontSize: "2.5rem", marginBottom: "20px" }}>
@@ -71,6 +81,7 @@ const About = () => {
       </div>
 
     </div>
+    </>
   );
 };
 

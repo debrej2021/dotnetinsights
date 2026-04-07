@@ -6,6 +6,7 @@ import Badge             from '../components/Badge.jsx';
 import VideoSalesSection from '../components/VideoSalesSection.jsx';
 import { useToggle }     from '../hooks/useToggle.js';
 import { colors, transition, radius } from '../styles/theme.js';
+import { Helmet} from 'react-helmet';
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 const RS = [
@@ -95,6 +96,16 @@ export default function DotNet7Rs() {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>.NET Migration — The 7 Rs | Deb Insights</title>
+      <meta
+        name="description"
+  content=".NET migration strategies explained using the 7 Rs — rehost, replatform, refactor and more. Practical cloud architecture and system design insights."
+
+      />
+      <link rel="canonical" href="https://insights.debprod.com/dotnet-7rs" />
+    </Helmet>
     <PostLayout
       title=".NET Migration — The 7 Rs"
       subtitle="Are you modernizing… or just moving tech debt to the cloud? Understand which strategy fits your system before you write a single line of migration code."
@@ -230,5 +241,6 @@ export default function DotNet7Rs() {
       <VideoSalesSection />
 
     </PostLayout>
+    </>
   );
 }
