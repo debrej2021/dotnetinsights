@@ -782,8 +782,8 @@ export default function DotNet7Rs() {
                 bg:        '#F89820',
                 tag:       'Spring Boot → ASP.NET Core',
                 blurb:     '8 patterns · Streams → LINQ, Optional, CompletableFuture, Spring DI, Records, JUnit',
-                badge:     '+ Ref Guide',
-                price:     '$3',
+                badge:     '+ Ref Guide'
+               // price:     '$3',
               },
             ].map(({ href, icon, lang, arrow, color, tag, blurb, badge, price }) => (
               <a
