@@ -95,7 +95,7 @@ export default function TermsAndConditions() {
         <Section title="8. Contact">
           Questions? Reach us at{' '}
           <a href="mailto:debkiitian@gmail.com" style={{ color: colors.blue, textDecoration: 'none' }}>
-            debkiitian@gmail.com
+            debkiitian@gmail.com or deba26@debprod.com
           </a>
           .
         </Section>
