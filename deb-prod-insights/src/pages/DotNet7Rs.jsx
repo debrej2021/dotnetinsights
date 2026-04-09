@@ -709,7 +709,7 @@ export default function DotNet7Rs() {
             whiteSpace:   'nowrap',
             flexShrink:   0,
           }}>
-            $3 — See details ↓
+            See details ↓
           </div>
         </div>
 
@@ -858,7 +858,7 @@ export default function DotNet7Rs() {
             color:        colors.textMuted,
           }}>
             💡 <strong style={{ color: colors.text }}>Bundle:</strong> Get both guides + COBOL Analyzer for{' '}
-            <strong style={{ color: colors.blue }}>$7</strong> — links on each guide page.
+            <strong style={{ color: colors.blue }}>$5 - see details</strong> — links on each guide page.
           </div>
         </Section>
 
