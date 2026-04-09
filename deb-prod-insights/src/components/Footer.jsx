@@ -143,6 +143,15 @@ const Footer = () => (
       }}
     >
       © {new Date().getFullYear()} Deb Insights — Engineering Systems &amp; Architecture
+      {' · '}
+      <a
+        href="/terms"
+        style={{ color: colors.textFaint ?? '#475569', textDecoration: 'none' }}
+        onMouseEnter={e => { e.currentTarget.style.color = colors.textMuted ?? '#94a3b8'; }}
+        onMouseLeave={e => { e.currentTarget.style.color = colors.textFaint ?? '#475569'; }}
+      >
+        Terms &amp; Conditions
+      </a>
     </div>
   </footer>
 );
